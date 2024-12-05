@@ -87,7 +87,7 @@ Recommended data visuals:
 3. Slicers
 4. Horizontal bar chart
 
-![Dashboard-Mockup](assets/images/dashboard mockup.png)
+![Dashboard-Mockup](assets/images/coffee sales dash mockup.png)
 
 ## Tools
 
@@ -140,11 +140,26 @@ The gathered data will be audited for quality looking mainly for errors, inconsi
 ### Transform the Data
 
 The following Excel formulas were used to combine tables together, edit abbreviations and create sales data:
+**Looking up customer name**: 
+=XLOOKUP(C2,customers!$A$1:$A$1001,customers!$B$1:$B$1001,,0)
+
+**Looking up customer email address and control measure for blank data**: =IF(XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0)=0,"",XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0))
+
+**Index matching for product details**
+=INDEX(products!$A$1:$G$49,MATCH(orders!$D2,products!$A$1:$A$49,0),MATCH(orders!I$1,products!$A$1:$G$1,0))
+
+**Editing Abbreviated data**:
+=IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica",""))))
+
+**Loyalty Card verification**:
+=XLOOKUP([@[Customer ID]],customers!$A$1:$A$1001,customers!$I$1:$I$1001,,0)
 
 # Testing
 ## Data quality tests
 
 - What are the data quality tests?
+- 
+A basic check for row count is carried out between sheets in the workbook.
 
 # Visualization
 
@@ -152,7 +167,7 @@ The following Excel formulas were used to combine tables together, edit abbrevia
 
 How does the dashboards look?
 
-![Power BI Dashboard](assets/images/PowerBI dashboard.png)
+![Power BI Dashboard](assets/images/coffee sales dash.png)
 
 
 # Analysis
@@ -166,7 +181,7 @@ In this section we will answer our design stage questions:
 5. What size of coffee has the highest sales?
 6. Which coffee product performs the best?
 
-### 1. Top 10 Youtubers with the most subscribers?
+### 1. Which is the best selling roast type?
 
 | Rank | Channel Name         | Subscribers (M) |
 |------|----------------------|-----------------|
@@ -182,7 +197,7 @@ In this section we will answer our design stage questions:
 | 10   | Ali-A                | 18.90           |
 
 
-### 2. Top 3 channels with the most uploads?
+### 2. Do loyalty cards affect sales?
 
 | Rank | Channel Name    | Videos Uploaded |
 |------|-----------------|-----------------|
@@ -191,7 +206,7 @@ In this section we will answer our design stage questions:
 | 3    | Yogscast        | 6,435           |
 
 
-### 3. Top 3 channels with the most views?
+### 3. What seasons have the highest sales?
 
 | Rank | Channel Name | Total Views (B) |
 |------|--------------|-----------------|
@@ -200,7 +215,7 @@ In this section we will answer our design stage questions:
 | 3    | Mister Max   | 15.97           |
 
 
-### 4. Top 3 channels with the highest average views per video?
+### 4. Which countries have the highest sales?
 
 | Channel Name | Averge Views per Video (M) |
 |--------------|-----------------|
@@ -208,7 +223,7 @@ In this section we will answer our design stage questions:
 | Jessie J     | 5.97            |
 | Dua Lipa     | 5.76            |
 
-### 5. Top 3 channels with the highest views per subscriber ratio?
+### 5. What size of coffee has the highest sales?
 
 | Rank | Channel Name       | Views per Subscriber        |
 |------|-----------------   |---------------------------- |
@@ -216,7 +231,7 @@ In this section we will answer our design stage questions:
 | 2    | Nickelodeon        | 1061.04                     |
 | 3    | Disney Junior UK   | 1031.97                     |
 
-### 6. Top 3 channels with the highest subscriber engagement rate per video uploaded?
+### 6. Which coffee product performs the best?
 
 | Rank | Channel Name    | Subscriber Engagement Rate  |
 |------|-----------------|---------------------------- |
@@ -229,25 +244,35 @@ In this section we will answer our design stage questions:
 
 For the next steps we need to look at analysing the metrics that are key for generating the expected ROI for the client:
 
-1. Subscribers
-2. Total views
-3. Videos uploaded
+1. Seasonsal Sales Performance
+2. Roast Type Performance
+3. Geographical Sales
 
 ## Validation
 
-### 1. Youtubers with the most subscribers 
-
+### 1. Seasonsal Sales Performance
 
 #### Output
 
-![Most views](assets/images/most views campaign.png)
+![Seasonsal Sales Performance](assets/images/
 
-# Concludion
+### 2. Roast Type Performance
+
+#### Output
+
+![Roast Type Performance](assets/images/
+
+### 3. Geographical Sales
+
+#### Output
+
+![Geographical Sales](assets/images/
+
+
+# Conclusion
 ## Discovery
 
 What were the overall findings?
-
-
 
 1. NoCopyrightSOunds, Dan Rhodes and DanTDM are the channnels with the most subscribers in the UK
 2. GRM Daily, Man City and Yogscast are the channels with the most videos uploaded
