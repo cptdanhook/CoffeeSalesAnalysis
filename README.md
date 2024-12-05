@@ -170,7 +170,7 @@ The following Excel formulas were used to combine tables together, edit abbrevia
 ## Data quality tests
 
 - What are the data quality tests?
-- 
+  
 A basic check for row count is carried out between sheets in the workbook.
 
 # Visualization
