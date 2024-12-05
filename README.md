@@ -87,7 +87,7 @@ Recommended data visuals:
 3. Slicers
 4. Horizontal bar chart
 
-![Dashboard-Mockup](assets/images/coffee sales dash mockup.png)
+![Dashboard-Mockup](assets/images/coffee_sales_dash_mockup.png)
 
 ## Tools
 
@@ -179,7 +179,7 @@ A basic check for row count is carried out between sheets in the workbook.
 
 How does the dashboards look?
 
-![Excel Dashboard](assets/images/coffee sales dash.png)
+![Excel Dashboard](assets/images/coffee_sales_dash.png)
 
 
 # Analysis
@@ -213,7 +213,7 @@ In this section we will answer our design stage questions:
 
 ### 3. What seasons have the highest sales?
 
-![Seasonal Sales Performance]((assets/images/sales over time.png)
+![Seasonal Sales Performance](assets/images/sales_over_time.png)
 
 
 ### 4. Which countries have the highest sales?
@@ -256,19 +256,19 @@ For the next steps we need to look at analysing the metrics that are key for gen
 
 #### Output
 
-![Roast Type Performance](assets/images/Roast type performance.png)
+![Roast Type Performance](assets/images/Roast_type_performance.png)
 
 ### 2. Geographical Sales
 
 #### Output
 
-![Geographical Sales](assets/images/geographical sales.png)
+![Geographical Sales](assets/images/geographical_sales.png)
 
 ### 3. Top Customers
 
 #### Output
 
-![Top Customers](assets/images/top 5 customers.png)
+![Top Customers](assets/images/top_5_customers.png)
 
 
 # Conclusion
