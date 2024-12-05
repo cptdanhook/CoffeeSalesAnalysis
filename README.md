@@ -141,25 +141,30 @@ The gathered data will be audited for quality looking mainly for errors, inconsi
 
 The following Excel formulas were used to combine tables together, edit abbreviations and create sales data:
 
-|**Looking up customer name**                                 |
-|-------------------------------------------------------------|
-|=XLOOKUP(C2,customers!$A$1:$A$1001,customers!$B$1:$B$1001,,0)|
+**Looking up customer name**
+```
+=XLOOKUP(C2,customers!$A$1:$A$1001,customers!$B$1:$B$1001,,0)
+```
 
-|**Looking up customer email address and control measure for blank data**                                                           |
-|-----------------------------------------------------------------------------------------------------------------------------------|
-|=IF(XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0)=0,"",XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0))|
+**Looking up customer email address and control measure for blank data**
+```
+=IF(XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0)=0,"",XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0))
+```
 
-|**Index matching for product details**                                                                    |
-|----------------------------------------------------------------------------------------------------------|
-|=INDEX(products!$A$1:$G$49,MATCH(orders!$D2,products!$A$1:$A$49,0),MATCH(orders!I$1,products!$A$1:$G$1,0))|
+**Index matching for product details**
+```
+=INDEX(products!$A$1:$G$49,MATCH(orders!$D2,products!$A$1:$A$49,0),MATCH(orders!I$1,products!$A$1:$G$1,0))
+```
 
-|**Editing Abbreviated data**                                                                    |
-|------------------------------------------------------------------------------------------------|
-|=IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica",""))))|
+**Editing Abbreviated data**
+```
+=IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica",""))))
+```
 
-|**Loyalty Card verification**                                              |
-|---------------------------------------------------------------------------|
-|=XLOOKUP([@[Customer ID]],customers!$A$1:$A$1001,customers!$I$1:$I$1001,,0)|
+**Loyalty Card verification**
+```
+=XLOOKUP([@[Customer ID]],customers!$A$1:$A$1001,customers!$I$1:$I$1001,,0)
+```
 
 # Testing
 ## Data quality tests
@@ -174,7 +179,7 @@ A basic check for row count is carried out between sheets in the workbook.
 
 How does the dashboards look?
 
-![Power BI Dashboard](assets/images/coffee sales dash.png)
+![Excel Dashboard](assets/images/coffee sales dash.png)
 
 
 # Analysis
@@ -190,90 +195,80 @@ In this section we will answer our design stage questions:
 
 ### 1. Which is the best selling roast type?
 
-| Rank | Channel Name         | Subscribers (M) |
-|------|----------------------|-----------------|
-| 1    | NoCopyrightSounds    | 33.60           |
-| 2    | DanTDM               | 28.60           |
-| 3    | Dan Rhodes           | 26.50           |
-| 4    | Miss Katy            | 24.50           |
-| 5    | Mister Max           | 24.40           |
-| 6    | KSI                  | 24.10           |
-| 7    | Jelly                | 23.50           |
-| 8    | Dua Lipa             | 23.30           |
-| 9    | Sidemen              | 21.00           |
-| 10   | Ali-A                | 18.90           |
+| Roast Type  | Sales (£) | Percentage of Total |
+|-------------|-----------|---------------------|
+| Light       | 17,354    | 38.45%              |
+| Medium      | 14,600    | 32.35%              |
+| Dark        | 13,179    | 29.20%              |
+
 
 
 ### 2. Do loyalty cards affect sales?
 
-| Rank | Channel Name    | Videos Uploaded |
-|------|-----------------|-----------------|
-| 1    | GRM Daily       | 14,696          |
-| 2    | Manchester City | 8,248           |
-| 3    | Yogscast        | 6,435           |
+| Loyalty Card | Sales (£)|Percentage of Total |
+|--------------|----------|--------------------|
+| No           | 24,216   | 53.65%             |
+| Yes          | 20,917   | 46.35%             |
 
 
 ### 3. What seasons have the highest sales?
 
-| Rank | Channel Name | Total Views (B) |
-|------|--------------|-----------------|
-| 1    | DanTDM       | 19.78           |
-| 2    | Dan Rhodes   | 18.56           |
-| 3    | Mister Max   | 15.97           |
+![Seasonal Sales Performance]((assets/images/sales over time.png)
 
 
 ### 4. Which countries have the highest sales?
 
-| Channel Name | Averge Views per Video (M) |
-|--------------|-----------------|
-| Mark Ronson  | 32.27           |
-| Jessie J     | 5.97            |
-| Dua Lipa     | 5.76            |
+| Country | Sales (£) |Percentage of Total |
+|---------|-----------|--------------------|
+| USA     | 35,638    | 78.96%             |
+| Ireland | 6,696     | 14.84%             |
+| UK      | 2,798     | 6.20%              |
 
 ### 5. What size of coffee has the highest sales?
 
-| Rank | Channel Name       | Views per Subscriber        |
-|------|-----------------   |---------------------------- |
-| 1    | GRM Daily          | 1185.79                     |
-| 2    | Nickelodeon        | 1061.04                     |
-| 3    | Disney Junior UK   | 1031.97                     |
+| Rank | Coffee Size  | Sales  (£)  | Percentage of Total |
+|------|--------------|------------ |---------------------|
+| 1    | 2.5          | 23,785      | 52.70%              |
+| 2    | 1.0          | 11,010      | 24.40%              |
+| 3    | 0.5          | 7,029       | 15.58%              |
+| 4    | 0.2          | 3,307       | 7.33%               |
 
 ### 6. Which coffee product performs the best?
 
-| Rank | Channel Name    | Subscriber Engagement Rate  |
-|------|-----------------|---------------------------- |
-| 1    | Mark Ronson     | 343,000                     |
-| 2    | Jessie J        | 110,416.67                  |
-| 3    | Dua Lipa        | 104,954.95                  |
-
+| Rank | Coffee Product | Sales (£)  |Percentage of Total |
+|------|----------------|----------- |--------------------|
+| 1    | Excelsa        | 12,306     | 27.27%             |
+| 2    | Liberica       | 12,054     | 26.71%             |
+| 3    | Arabica        | 11,768     | 26.07%             |
+| 4    | Robusta        | 9,005      | 19.95%             |
 
 ### Outcome
 
 For the next steps we need to look at analysing the metrics that are key for generating the expected ROI for the client:
 
-1. Seasonsal Sales Performance
-2. Roast Type Performance
-3. Geographical Sales
+1. Roast Type Performance
+2. Geographical Sales
+3. Top Customers
 
 ## Validation
 
-### 1. Seasonsal Sales Performance
+### 1. Roast Type Performance
 
 #### Output
 
-![Seasonsal Sales Performance](assets/images/
+![Roast Type Performance](assets/images/Roast type performance.png)
 
-### 2. Roast Type Performance
-
-#### Output
-
-![Roast Type Performance](assets/images/
-
-### 3. Geographical Sales
+### 2. Geographical Sales
 
 #### Output
 
-![Geographical Sales](assets/images/
+![Geographical Sales](assets/images/geographical sales.png)
+
+### 3. Top Customers
+
+#### Output
+
+![Top Customers](assets/images/top 5 customers.png)
 
 
 # Conclusion
