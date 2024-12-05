@@ -140,19 +140,26 @@ The gathered data will be audited for quality looking mainly for errors, inconsi
 ### Transform the Data
 
 The following Excel formulas were used to combine tables together, edit abbreviations and create sales data:
-**Looking up customer name**: 
-=XLOOKUP(C2,customers!$A$1:$A$1001,customers!$B$1:$B$1001,,0)
 
-**Looking up customer email address and control measure for blank data**: =IF(XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0)=0,"",XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0))
+|**Looking up customer name**                                 |
+|-------------------------------------------------------------|
+|=XLOOKUP(C2,customers!$A$1:$A$1001,customers!$B$1:$B$1001,,0)|
 
-**Index matching for product details**
-=INDEX(products!$A$1:$G$49,MATCH(orders!$D2,products!$A$1:$A$49,0),MATCH(orders!I$1,products!$A$1:$G$1,0))
+|**Looking up customer email address and control measure for blank data**                                                           |
+|-----------------------------------------------------------------------------------------------------------------------------------|
+|=IF(XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0)=0,"",XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0))|
 
-**Editing Abbreviated data**:
-=IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica",""))))
+|**Index matching for product details**                                                                    |
+|----------------------------------------------------------------------------------------------------------|
+|=INDEX(products!$A$1:$G$49,MATCH(orders!$D2,products!$A$1:$A$49,0),MATCH(orders!I$1,products!$A$1:$G$1,0))|
 
-**Loyalty Card verification**:
-=XLOOKUP([@[Customer ID]],customers!$A$1:$A$1001,customers!$I$1:$I$1001,,0)
+|**Editing Abbreviated data**                                                                    |
+|------------------------------------------------------------------------------------------------|
+|=IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica",""))))|
+
+|**Loyalty Card verification**                                              |
+|---------------------------------------------------------------------------|
+|=XLOOKUP([@[Customer ID]],customers!$A$1:$A$1001,customers!$I$1:$I$1001,,0)|
 
 # Testing
 ## Data quality tests
