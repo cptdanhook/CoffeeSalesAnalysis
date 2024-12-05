@@ -276,45 +276,41 @@ For the next steps we need to look at analysing the metrics that are key for gen
 
 What were the overall findings?
 
-1. NoCopyrightSOunds, Dan Rhodes and DanTDM are the channnels with the most subscribers in the UK
-2. GRM Daily, Man City and Yogscast are the channels with the most videos uploaded
-3. DanTDM, Dan RHodes and Mister Max are the channels with the most views
-4. Entertainment channels are useful for broader reach, as the channels posting consistently on their platforms and generating the most engagement are focus on entertainment and music 
+1. The largest coffee serving of 2.5 performed the best with over half of all sales. The next highest size accounted for less than 1/4 of overall sales.
+2. The USA accounted for over 3/4 of the market and out performed the UK and Ireland considerably.
+3. Sales from those without a loyalty card were 7.3% higher than those with a card.
+4. Roast type sales didnt show any significant finding with a variation of ~ 4% between the three roasts.
+5. There is a similar relationshit between the product type with a very balanced performance across the board.
 
 ## Recommendations
 
 Actionable Insights:
 
-![Actionable insights](assets/images/actionable insights.png)
 
-1. **Dan Rhodes** is the best YouTube channel to collaborate with if we want to **maximize visbility** because this channel has the **most YouTube subscribers in the UK**.
-   
-2. Although GRM Daily, Man City and Yogcasts are regular publishers on YouTube, it may be worth considering whether collaborating with them with the current budget caps are worth the effort, as the potential return on investments is significantly lower compared to the other channels.
-   
-3. **Mister Max** is the best YouTuber to collaborate with if we're interested in **maximizing reach**, but collaborating with **DanTDM and Dan Rhodes** may be better **long-term options** considering the fact that they both have large subscriber bases and are averaging significantly high number of views.
-   
-4. The top 3 channels to form collaborations with are NoCopyrightSounds, DanTDM and Dan Rhodes based on this analysis, because they attract the most engagement on their channels consistently.
+1. The **2.5** size performs the best across all locations and should be targeted for promotions and deals.
 
+2. The **USA** market should be the main forcus for marketing campaigns as it generates the **highest sales** currently.
+
+3. Promotions and **increased advertising** in the **UK and Ireland** should be a priority to expand the market potential.
+
+4. **Loyalty promotions** and deals should be a focus as **non-members** account for the majority of sales.
+
+5. **Seasonal events** and promotions should be a large focus as there are currently **no trends** in seasonal sales over the last 3 years.
+   
 
 
 ## Potential ROI
 What ROI is expected based on the actionable insights?
 
-1. Setting up a **product placement** deal with **Dan Rhodes** would make the client a net profit of **£1,065,000 per video**.
-2. An **influencer marketing contract** with **Mister Max** can see the client generate a net profit of **£1,276,000**.
-3. If we go with a **product placement campaign** with **DanTDM**, this could  generate the client approximately **£484,000 per video**. If we advance with an **influencer marketing campaign** deal instead, this would make the client a one-off net profit of **£404,000**.
-4. **NoCopyrightSounds product placement** could profit the client **£642,000 per video** too (which is worth considering). 
+1. Setting up a **Loyalty card offer** deal for new customers to push loyalty card applicants should increase sales. (Birthday free coffee, free coffee after x purchases etc.)
+2.  **Seasonal products and offers** should be a main focus to enhance sales during key seasons (New Year, Easter, Summer holidays, Halloween, Black Friday and Christmas)
+3. An **increase advertising push** for UK and Ireland markets should be a priority as the market share here is small.
 
 
 ## Course of Action
 
-Based on the analysis, the best channel to partner with on a **product placement** deal would be **Dan Rhodes**.
-This initial deal will be assessed againsts the marketing teams initial forecasting. If the milestones are met throughout the deal, then future partnerships with DanTDM, Mister Max and NoCopyrightSounds can be advanced.
+Based on the analysis, for continues profits, targeting the **2.5** size coffee in the **USA** with a **loyalty promotion** should see increased profits.
+This initial deal will be assessed againsts the marketing teams initial forecasting. If the milestones are met throughout the deal, then future promotions can be implemented.
 
-Actioning the Insights:
 
-1. Reach out to the teams behind each of these channels, starting with Dan Rhodes.
-2. Negotiate contracts within the budgets allocated to each marketing campaign.
-3. Kick off the campaigns and track each of their performances against the KPIs.
-4. Review how the campaigns have gone, gather insights and optimize based on feedback from converted customers and each channel's audiences.
 
